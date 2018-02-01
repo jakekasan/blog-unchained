@@ -6,8 +6,8 @@ class Article(models.Model):
     title = models.CharField(max_length=100)
     slug = models.SlugField()
     body = models.TextField()
-    date = models.DateTimeField()
-    # add in thumbnail later
-    # add in author later
-    def __init__(self):
-        pass
+    date = models.DateTimeField(auto_now_add=True)
+    # to add later
+
+    def __str__(self):
+        return(self.title)
